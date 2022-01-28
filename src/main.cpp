@@ -1,5 +1,8 @@
 #define _XOPEN_SOURCE_EXTENDED
-//idfk why i have to define this
+//idfk why i have to define this, also the install-pkg's ncursesw messed up so i had to go
+//and upload the targz and then extract it and then convert it to zip and then convert it to .zip
+//and upload it to replit and then extract it here
+//god i hate this i will fix the includes
 #include <ncursesw/curses.h>
 #include <iostream>
 #include <locale.h>
@@ -34,8 +37,9 @@ int main(){
     }
     if(can_change_color() == FALSE){
         mvaddstr(8, 0, "your terminal doesn't support changing colors.");
-        mvaddstr(9, 0,)
     }
 
+		mvaddwstr(9, 0, "TEST : \u2588");
+		ch = getch();
     endwin();
 }
